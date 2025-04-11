@@ -27,3 +27,12 @@
     - Se hacen pruebas para ver si el método **is_correct()** está bien definido.
 4. Pruebas unitarias con pytest
     - Se ejecutó el comando pytest sobre la carpeta *app* para revisar si era capaz de pasar el testeo de prueba.
+
+## Día 3:
+
+1. Agregar clase Quiz
+    - Se coloca la clase **Quiz** en **trivia.py** la cuál nos añadirá preguntas y podrá avanzar entre preguntas dentro de la cantidad de preguntas que tengamos para el juego.
+2. Creación función **run_quiz()**
+    - Se creó la función **run_quiz()** dentro de la clase **Quiz** que imprimirá todas las preguntas que tenga nuestro quiz.
+3. Creación rama **feature/quiz-trivia**
+    - se coloca todos los cambios realizados en conjunto con el cambio en el **CHANGELOG.md** dentro de la rama **feature/quiz-trivia**, para luego hacer un merge --no-ff con la rama develop para finalizar lo hecho el día 3.
