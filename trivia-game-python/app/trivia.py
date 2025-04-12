@@ -32,10 +32,13 @@ class Quiz:
             self.incorrect_answers += 1
             return False
 
-    def run_quiz(self):
-        question = self.get_next_question()
+def run_quiz(quiz):
+    rounds = 10
+    for _ in range(rondas):
+        question = quiz.get_next_question()
         if question:
-            print(question.description)
+            print(f"Pregunta: {question.options}")
         else:
             print("No hay más preguntas.")
+            break
         
