@@ -6,10 +6,13 @@ class Question:
 
     def is_correct(self, answer):
         return self.correct_answer == answer
+
 class Quiz:
     def __init__(self):
         self.questions = []
         self.current_question_index = 0
+        self.correct_answers = 0
+        self.incorrect_answers = 0
 
     def add_question(self, question):
         self.questions.append(question)
@@ -20,10 +23,22 @@ class Quiz:
             self.current_question_index += 1
             return question
         return None
-    def run_quiz(self):
-        question = self.get_next_question()
+    
+    def answer_question(self, question, answer):
+        if question.is_correct(answer):
+            self.correct_answers += 1
+            return True
+        else:
+            self.incorrect_answers += 1
+            return False
+
+def run_quiz(quiz):
+    rounds = 10
+    for _ in range(rondas):
+        question = quiz.get_next_question()
         if question:
-            print(question.description)
+            print(f"Pregunta: {question.options}")
         else:
             print("No hay más preguntas.")
+            break
         
