@@ -36,3 +36,19 @@
     - Se creó la función **run_quiz()** dentro de la clase **Quiz** que imprimirá todas las preguntas que tenga nuestro quiz.
 3. Creación rama **feature/quiz-trivia**
     - se coloca todos los cambios realizados en conjunto con el cambio en el **CHANGELOG.md** dentro de la rama **feature/quiz-trivia**, para luego hacer un merge --no-ff con la rama develop para finalizar lo hecho el día 3.
+
+## Día 4:
+1. Modificación de la clase **Quiz**
+    - Se agregó la lógica de tener preguntas correctas e incorrectas dentro de nuestro **Quiz** para cada pregunta añadida.
+2. Actualización de pruebas unitarias
+    - Se añadió la función **test_quiz_scoring()** para corroborar si las preguntas y respuestas añadidas están bien implementadas.
+    - Se verificó con una prueba con **pytest**.
+3. Creación de la rama **feature/quiz-puntuacion**
+4. Actualización de la función **run_quiz()**
+    - Lógica simple modificada para que **run_quiz()** pueda visualizar como máximo las 10 preguntas establecidas.
+
+## Día 5:
+1. Actualización a la función **run_quiz()**
+    - Actualización final de la interfaz que tendrá nuestro juego de preguntas, se visualizará cada pregunta, las preguntas correctas e incorrectas y finalizará el juego.
+2. Pruebas con 5, 10, 20 preguntas usando **run_quiz()**
+3. Creación de la rama **feature/implementacion-run_quiz**
