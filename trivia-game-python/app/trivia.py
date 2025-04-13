@@ -32,13 +32,30 @@ class Quiz:
             self.incorrect_answers += 1
             return False
 
-def run_quiz(quiz):
-    rounds = 10
-    for _ in range(rondas):
+def run_quiz():
+    print("Bienvenido al juego de Trivia!")
+    print("Responde las siguientes preguntas seleccionando el número de la opción correcta.")
+    quiz = Quiz()
+    # Aquí se cargarán 10 preguntas, por ejemplo:
+    quiz.add_question(Question("¿Cuanto es 2 + 8?", ["10", "9", "11", "8"], "1"))
+    quiz.add_question(Question("¿Cuál es la capital de Francia?", ["Madrid", "Londres", "París", "Berlín"], "3"))
+    while quiz.current_question_index < 10:
         question = quiz.get_next_question()
         if question:
-            print(f"Pregunta: {question.options}")
+            print(f"Pregunta {quiz.current_question_index}: {question.description}")
+            for idx, option in enumerate(question.options):
+                print(f"{idx + 1}) {option}")
+            answer = input("Tu respuesta: ")
+            if quiz.answer_question(question, answer):
+                print("¡Correcto!")
+            else:
+                print("Incorrecto.")
         else:
-            print("No hay más preguntas.")
             break
-        
+    print("Juego terminado.")
+    print(f"Preguntas contestadas: {quiz.current_question_index}")
+    print(f"Respuestas correctas: {quiz.correct_answers}")
+    print(f"Respuestas incorrectas: {quiz.incorrect_answers}")
+
+if (__name__ == "__main__"):
+    run_quiz()
