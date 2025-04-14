@@ -37,8 +37,8 @@ def run_quiz():
     print("Responde las siguientes preguntas seleccionando el número de la opción correcta.")
     quiz = Quiz()
     # Aquí se cargarán 10 preguntas, por ejemplo:
-    quiz.add_question(Question("¿Cuanto es 2 + 8?", ["10", "9", "11", "8"], "1"))
-    quiz.add_question(Question("¿Cuál es la capital de Francia?", ["Madrid", "Londres", "París", "Berlín"], "3"))
+    quiz.add_question(Question("¿Cuanto es 2 + 8?", ["10", "9", "11", "8"], "10"))
+    quiz.add_question(Question("¿Cuál es la capital de Francia?", ["Madrid", "Londres", "París", "Berlín"], "París"))
     while quiz.current_question_index < 10:
         question = quiz.get_next_question()
         if question:
@@ -58,4 +58,32 @@ def run_quiz():
     print(f"Respuestas incorrectas: {quiz.incorrect_answers}")
 
 if (__name__ == "__main__"):
-    run_quiz()
+    print("""
+████████╗██████╗ ██╗██╗   ██╗██╗ █████╗      ██████╗  █████╗ ███╗   ███╗███████╗
+╚══██╔══╝██╔══██╗██║██║   ██║██║██╔══██╗    ██╔════╝ ██╔══██╗████╗ ████║██╔════╝
+   ██║   ██████╔╝██║██║   ██║██║███████║    ██║  ███╗███████║██╔████╔██║█████╗  
+   ██║   ██╔══██╗██║╚██╗ ██╔╝██║██╔══██║    ██║   ██║██╔══██║██║╚██╔╝██║██╔══╝  
+   ██║   ██║  ██║██║ ╚████╔╝ ██║██║  ██║    ╚██████╔╝██║  ██║██║ ╚═╝ ██║███████╗
+   ╚═╝   ╚═╝  ╚═╝╚═╝  ╚═══╝  ╚═╝╚═╝  ╚═╝     ╚═════╝ ╚═╝  ╚═╝╚═╝     ╚═╝╚══════╝
+                                                                            
+                             ─────────────────────
+                             ¡Bienvenido al juego!
+                             ─────────────────────
+                             1. Empezar Juego
+                             2. Leaderboard
+                             3. Salir
+""")
+    while True:
+        opcion = input("Elije una opción: ")
+        if opcion == '1':
+            run_quiz()
+            exit()
+        elif opcion == '2':
+            print("Mirar al leaderboard.") 
+        elif opcion == '3':
+            print("\nGracias por jugar!")
+            exit()
+        else:
+            print("Opción invalida.")
+
+
