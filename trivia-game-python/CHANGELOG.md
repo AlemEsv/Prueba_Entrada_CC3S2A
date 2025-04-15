@@ -52,3 +52,12 @@
     - Actualización final de la interfaz que tendrá nuestro juego de preguntas, se visualizará cada pregunta, las preguntas correctas e incorrectas y finalizará el juego.
 2. Pruebas con 5, 10, 20 preguntas usando **run_quiz()**
 3. Creación de la rama **feature/implementacion-run_quiz**
+
+## Día 6:
+1. Configuración de **GitHub Actions** para ejecutar pruebas unitarias y de integración.
+    - Creé el repositorio en github para colocar los cambios que he estado haciendo hasta el día 6, para de ahí crear el primer **secreto** dentro de mis variables ocultas con la KEY proporcionada en SonarQube
+2. Archivo `.github/workflows/ci.yml` agregado.
+3. Configuración de los archivos **base_datos_preguntas.py** y **conection_fastAPI.py**.
+    - Creación de clases que permiten la conexión de la base de datos con las preguntas organizadas por dificultad creadas con Adminer gracias a la imagne creada por docker de postgre.
+4. Organización de archivos dentro de la carpeta *app*
+    Para hacer que el archivo **trivia.py** no esté cargado de funciones y clases coloqué varias partes en diferentes archivos más especificos.
