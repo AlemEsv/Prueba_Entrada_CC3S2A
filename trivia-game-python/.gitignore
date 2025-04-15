@@ -1,5 +1,7 @@
 .vscode/
 *.log
-.env/
+.env
+.env.*
 *.env
+venv/
 .dist
