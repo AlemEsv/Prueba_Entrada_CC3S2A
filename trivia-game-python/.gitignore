@@ -1,7 +1,12 @@
 .vscode/
-*.log
-.env
-.env.*
-*.env
-venv/
 .dist
+
+venv/
+.env
+.venv/
+ENV/
+env/
+
+*.log
+
+dist/
