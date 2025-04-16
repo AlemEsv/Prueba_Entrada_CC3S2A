@@ -60,4 +60,13 @@
 3. Configuración de los archivos **base_datos_preguntas.py** y **conection_fastAPI.py**.
     - Creación de clases que permiten la conexión de la base de datos con las preguntas organizadas por dificultad creadas con Adminer gracias a la imagne creada por docker de postgre.
 4. Organización de archivos dentro de la carpeta *app*
-    Para hacer que el archivo **trivia.py** no esté cargado de funciones y clases coloqué varias partes en diferentes archivos más especificos.
+    - Para hacer que el archivo **trivia.py** no esté cargado de funciones y clases coloqué varias partes en diferentes archivos más especificos.
+
+## Día 7:
+1. Gestión de variables de entorno
+    - Creación del archivo **.env** con el URL de la base de datos y la llave secreta.
+2. Pruebas de integración y carga
+    - Configuración de pruebas de integración para los archivos `main.py`, `session.py`, `settings.py` y `trivia.py`.
+    - Creación del archivo `locustfile.py` para el teste de pruebas de carga.
+3. Creación tardía del archivo **.gitignore**
+    - Creación del .gitignore para no subir el *enviroment* a github, y archivos que no sean necesarios de ver por personas ajenas al proyecto.
